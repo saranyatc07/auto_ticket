@@ -1,0 +1,28 @@
+var ticket = "Cannot connect to Wi-Fi";
+var category = "";
+var group = "";
+
+if (ticket.toLowerCase().includes("wifi")) {
+    category = "Network";
+    group = "Network Support";
+}
+else if (ticket.toLowerCase().includes("password")) {
+    category = "Account / Access";
+    group = "Service Desk";
+}
+else if (ticket.toLowerCase().includes("printer")) {
+    category = "Hardware";
+    group = "Hardware Support";
+}
+else if (ticket.toLowerCase().includes("application")) {
+    category = "Software";
+    group = "Application Support";
+}
+else {
+    category = "Unclassified";
+    group = "Manual Review";
+}
+
+console.log("Ticket: " + ticket);
+console.log("Category: " + category);
+console.log("Assignment Group: " + group);
